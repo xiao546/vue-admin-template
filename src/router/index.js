@@ -159,6 +159,20 @@ export const constantRoutes = [
     ]
   },
 
+  // 网页打包
+  {
+    path: '/editorpack',
+    component: Layout,
+    children: [
+      {
+        path: 'index',
+        name: 'Form',
+        component: () => import('@/views/editorpack/index'),
+        meta: { title: '编辑器打包', icon: 'form' }
+      }
+    ]
+  },
+
   // 404 page must be placed at the end !!!
   { path: '*', redirect: '/404', hidden: true }
 ]
