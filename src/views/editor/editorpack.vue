@@ -20,28 +20,22 @@
     <el-button type="primary">打包</el-button>
     </el-row>
     <br>
-    <el-container>
-      <el-header>svn更新日志</el-header>
-      <el-main>
-        <el-container>
-          <el-header>上次打包后的更新</el-header>
-          <el-main>
-            <el-table :data="svnUpdateData">
-              <el-table-column prop="version" label="版本" width="140"></el-table-column>
-              <el-table-column prop="author" label="作者" width="120"></el-table-column>
-              <el-table-column prop="date" label="日期" width="120"></el-table-column>
-              <el-table-column prop="info" label="详情"></el-table-column>
-            </el-table>
-          </el-main>
-        </el-container>
-        <el-container>
-          <el-header>最近更新日志</el-header>
-          <el-main>
-            
-          </el-main>
-        </el-container>
-      </el-main>
-    </el-container>
+      <el-table :data="svnUpdateData">
+        <el-table-column label="上次打包后的更新">
+          <el-table-column prop="version" label="版本" width="140"></el-table-column>
+          <el-table-column prop="author" label="作者" width="120"></el-table-column>
+          <el-table-column prop="date" label="日期" width="120"></el-table-column>
+          <el-table-column prop="info" label="详情"></el-table-column>
+        </el-table-column>
+      </el-table>
+      <el-table :data="svnUpdateData">
+        <el-table-column label="最近更新日志">
+          <el-table-column prop="version" label="版本" width="140"></el-table-column>
+          <el-table-column prop="author" label="作者" width="120"></el-table-column>
+          <el-table-column prop="date" label="日期" width="120"></el-table-column>
+          <el-table-column prop="info" label="详情"></el-table-column>
+        </el-table-column>
+      </el-table>
   </div>
 </template>
 
