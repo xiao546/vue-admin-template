@@ -74,7 +74,9 @@ export default {
     }
     return {
       loginForm: {
-        username: 'admin',
+        // username: 'admin',
+        // password: '111111'
+        username: 'editor',
         password: '111111'
       },
       loginRules: {
@@ -93,6 +95,9 @@ export default {
       },
       immediate: true
     }
+  },
+  mounted() {
+    this.handleLogin()
   },
   methods: {
     showPwd() {
