@@ -161,14 +161,40 @@ export const constantRoutes = [
 
   // 网页打包
   {
-    path: '/editorpack',
+    path: '/editor',
     component: Layout,
     children: [
       {
-        path: 'index',
+        path: 'editorpack',
         name: 'Form',
-        component: () => import('@/views/editorpack/index'),
+        component: () => import('@/views/editor/editorpack'),
         meta: { title: '编辑器打包', icon: 'form' }
+      },
+    ]
+  },
+  // 引擎更新
+  {
+    path: '/editor',
+    component: Layout,
+    children: [
+      {
+        path: 'engineupdate',
+        name: 'Form',
+        component: () => import('@/views/editor/engineupdate'),
+        meta: { title: '引擎更新', icon: 'form' }
+      }
+    ]
+  },
+  // 更新日志
+  {
+    path: '/editor',
+    component: Layout,
+    children: [
+      {
+        path: 'editorupdatelog',
+        name: 'Form',
+        component: () => import('@/views/editor/editorupdatelog'),
+        meta: { title: '更新日志', icon: 'form' }
       }
     ]
   },
